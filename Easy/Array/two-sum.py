@@ -12,7 +12,7 @@ print(twoSum([2,3,7,10,9], 11))
 
 # optimized version
 def twoSum(list, target):
-    bag = {}  # to store val:key like 3 : 0, 5 : 1 ... from [3,5,1...]
+    bag = {}  # to store element:index like 3 : 0, 5 : 1 ... from [3,5,1...]
     for i, x in enumerate(list):  # i am getting i = index, x = value
         diff = target - x  # let's say 4 = 9 - 5
         if diff in bag:  # if 4 is in my bag
