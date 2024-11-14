@@ -47,12 +47,24 @@
 # def checkSorted(nums):
 #     if len(nums) <= 1:  # if array has 1 element, no need to check
 #         return True
-#     for i in range(1, len(nums)):  # start looping from the 1st element
+#     for i in range(1, len(nums)):  # start looping from the 2nd element
 #         if nums[i-1] > nums[i]:  # if prev is greater than current
 #             return False  # it's not sorted
 #     return True
 # print(checkSorted([20, 23, 23, 45, 88]))  # True
 # print(checkSorted([7, 9, 11, 3]))  # False
+
+
+# remove duplicates from sorted array and give its length
+# def removeDuplicates(nums):
+#     left = 1  # pointer at index 1 to track the position of unique elements.
+#     for right in range(1, len(nums)):  # we start from index 1 since element at index 0 is unique
+#         if nums[right] != nums[right - 1]:  # if current index 1 element is different from previous one
+#             nums[left] = nums[right]  # then place unique element at the left pointer position
+#             left += 1  # move left index by 1
+#     print("Unique elements: ", nums[:left])  # return unique elements up to the left pointer
+#     print("Length: ", left)
+# removeDuplicates([1,1,2,3,4,5,5])
 
 
 # rotate an array
