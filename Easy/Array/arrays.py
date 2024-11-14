@@ -43,6 +43,18 @@
 # print(secondLargest([3,9,7,12,2,9]))
 
 
+# check if array is sorted
+# def checkSorted(nums):
+#     if len(nums) <= 1:  # if array has 1 element, no need to check
+#         return True
+#     for i in range(1, len(nums)):  # start looping from the 1st element
+#         if nums[i-1] > nums[i]:  # if prev is greater than current
+#             return False  # it's not sorted
+#     return True
+# print(checkSorted([20, 23, 23, 45, 88]))  # True
+# print(checkSorted([7, 9, 11, 3]))  # False
+
+
 # rotate an array
 # def rotateLeft(nums):
 #     if len(nums) > 0:
