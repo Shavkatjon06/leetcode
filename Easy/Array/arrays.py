@@ -7,47 +7,48 @@
 # print(reverse([3,5,7,8]))
 
 
-# middle of 2 arrays in a new array
-# def middle(a, b):
-#     mid1 = len(a) // 2
-#     mid2 = len(b) // 2
-#     return [a[mid1], b[mid2]]
-# print(middle([3,4,5], [6,7,8]))
-
-
-# sum of array
-# from functools import reduce
-# def add(a,b):
-#     return a+b
-# result = reduce(add, [1,2,3,4,5])
-# print(result)
-
-
-# find largest element and convert all elements to largest
+# find largest element
 # def largest(nums):
-#     largest = 0
-#     for i in nums:
-#         if i > largest:
-#             largest = i
-#     nums = [largest for i in nums]
-#     return nums
+#     largest = 0  # a variable to store the largest element
+#     for i in nums:  # loop through the elements
+#         if i > largest:  # if 3 > 0, largest is 3. if 56 > 3, largest = 56 etc...
+#             largest = i  # largest is i
+#     return largest
 # print(largest([3,56,4,2]))
 
 
-# rotate an array #strategy_1
-# def rotateLeft1(nums):
-#     if len(nums) == 0:
-#         return False
-#     return nums[1:] + [nums[0]]
-# print(rotateLeft1([1,2,3,4,5,6]))
+# find the second-largest element strategy-1
+# def secondLargest(nums):
+#     length = len(nums)
+#     nums.sort()
+#     for i in range(length - 2, -1, -1):
+#         if nums[i] != nums[length - 1]:
+#             return nums[i]
+#     return -1
+# print(secondLargest([3,9,7,13,2,13]))
 
 
-# rotate an array #strategy_2
-# def rotateLeft2(nums):
+# find the second-largest element strategy-2
+# def secondLargest(nums):
+#     length = len(nums)  # get the length of array
+#     largest = -1  # to store the largest element
+#     secondLargest = -1  # to store the second-largest element
+#     for i in range(length):
+#         if nums[i] > largest:  # if current element is greater than largest
+#             secondLargest = largest  # store the previous largest value
+#             largest = nums[i]  # update the largest value
+#         elif nums[i] < largest and nums[i] > secondLargest:  # if current is less than largest but greater than second-largest
+#             secondLargest = nums[i]  # update second-largest
+#     return secondLargest
+# print(secondLargest([3,9,7,12,2,9]))
+
+
+# rotate an array
+# def rotateLeft(nums):
 #     if len(nums) > 0:
 #         first = nums[0]
 #         for i in range(len(nums)-1):
 #             nums[i] = nums[i+1]
 #         nums[-1] = first
 #     return nums
-# print(rotateLeft2([1,2,3,4]))
+# print(rotateLeft([1,2,3,4]))

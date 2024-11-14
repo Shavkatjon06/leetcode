@@ -25,4 +25,3 @@ def topKFrequent(nums, k):
 
 
 print(topKFrequent([1,1,2,3,3,3], 2))
-print(topKFrequent([0,0,1], 2))
