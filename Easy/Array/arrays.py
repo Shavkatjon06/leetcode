@@ -1,10 +1,21 @@
-# reverse an array
+# reverse an array 1
 # def reverse(nums):
 #   new = []
 #   for i in range(len(nums)):
 #     new.append(nums.pop())
 #   return new
 # print(reverse([3,5,7,8]))
+
+# reverse an array 2
+# def reverseArray(nums):
+#     left = 0  # points beginning
+#     right = len(nums) - 1  # points the end
+#     while left < right:
+#         nums[left], nums[right] = nums[right], nums[left]  # swap elements
+#         left += 1
+#         right -= 1
+#     return nums
+# print(reverseArray([1,2,3,4,5]))
 
 
 # find largest element
@@ -67,12 +78,72 @@
 # removeDuplicates([1,1,2,3,4,5,5])
 
 
-# rotate an array
-# def rotateLeft(nums):
-#     if len(nums) > 0:
-#         first = nums[0]
-#         for i in range(len(nums)-1):
-#             nums[i] = nums[i+1]
-#         nums[-1] = first
+# left rotation an array
+# def rotateLeft(nums, k):
+#     for j in range(k):
+#         if len(nums) > 0:
+#             first = nums[0]
+#             for i in range(len(nums) - 1):
+#                 nums[i] = nums[i + 1]
+#             nums[-1] = first
 #     return nums
-# print(rotateLeft([1,2,3,4]))
+# print(rotateLeft([1,2,3,4,5,6,7], 3))
+
+
+# right rotation an array
+# def rotateRight(nums):
+#     if len(nums) > 0:
+#         last = nums[-1]
+#         for i in range(len(nums) - 1, 0, -1):
+#             nums[i] = nums[i-1]
+#         nums[0] = last
+#     return nums
+# print(rotateRight([1,2,3,4,5]))
+
+
+# move zeroes to the end 1
+# def moveZeroes(nums):
+#     left = 0
+#     for i in range(len(nums)):
+#         if nums[i] != 0:
+#             nums[left] = nums[i]
+#             left += 1
+#     for i in range(left, len(nums)):
+#         nums[i] = 0
+#     return nums
+# print(moveZeroes([0,1,2,0,3]))
+
+
+# move zeroes to the end 2
+# def moveZeroes(nums):
+#     left = 0
+#     for i in range(len(nums)):
+#         if nums[i] != 0:
+#             nums[i], nums[left] = nums[left], nums[i]
+#             left += 1
+#     return nums
+# print(moveZeroes([0,0,1,2,0,3,0]))
+
+
+# move all zeroes to the front 1
+# def moveZeroes(nums):
+#     right = len(nums) - 1
+#     for i in range(len(nums) - 1, -1, -1):
+#         if nums[i] != 0:
+#             nums[right] = nums[i]
+#             right -= 1
+#     for i in range(right + 1):
+#         nums[i] = 0
+#     return nums
+# print(moveZeroes([1,2,0,3,0,4]))
+
+
+# move all zeroes to the front 2
+# def moveZeroes(nums):
+#     left = 0
+#     for i in range(len(nums)):
+#         if nums[i] == 0:
+#             nums[left], nums[i] = nums[i], nums[left]
+#             left += 1
+#     return nums
+# print(moveZeroes([1,0,2,0,0,3,4]))
