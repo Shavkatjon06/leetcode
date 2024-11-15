@@ -147,3 +147,21 @@
 #             left += 1
 #     return nums
 # print(moveZeroes([1,0,2,0,0,3,4]))
+
+
+# distinct (unique) elements only
+# def distinct(nums):
+#     answer = set(nums)
+#     return list(answer)
+# print(distinct([0,6,2,4,9,6,7]))
+
+
+# union of 2 arrays
+# def union(nums1, nums2):
+#     bag = set()
+#     for i in nums1:
+#         bag.add(i)
+#     for i in nums2:
+#         bag.add(i)
+#     print(list(bag))
+# union([1,2,3,2,1], [3,2,2,3,4])
