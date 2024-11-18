@@ -9,3 +9,4 @@ def plusOne(digits):
 
 print(plusOne([1,2,3,4]))
 print(plusOne([9,9,9]))
+print(plusOne([1,9]))

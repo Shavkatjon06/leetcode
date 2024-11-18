@@ -21,4 +21,4 @@ def longestCommonPrefix2(strs: list[str]) -> str:
                 return result  # then we don't have common prefix
         result += strs[0][i]  # else we will add found prefix character to our result
     return result
-print(longestCommonPrefix2(['flower', 'flight']))
+print(longestCommonPrefix2(['flower', 'flight', 'flue']))
