@@ -26,19 +26,3 @@ class Stack:
 
     def display(self):
         print(self.stack)
-
-stack = Stack()
-stack.push(2)
-stack.push(3)
-stack.push(5)
-stack.push(7)
-stack.display()  # [2, 3, 5, 7]
-
-print(stack.size())  # 4
-
-print(stack.isEmpty())  # False
-
-print(stack.top())  # 7
-
-print(stack.pop())  # 7
-stack.display()  # [2, 3, 5]
