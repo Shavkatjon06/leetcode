@@ -1,8 +1,13 @@
-# append
 # insert at the beginning
 # insert at a specific position
+# insert to the last
+
+# delete beginning
+# delete the last
+
 # display forward
 # display backward
+
 # length
 
 class Node:
@@ -75,6 +80,27 @@ def insertPosition(head, position, data):
     return head
 
 
+def deleteBeginning(head):
+    if head is None:
+        return "List is empty."
+    head = head.next
+    if head:
+        head.prev = None
+    return head
+
+
+def deleteEnding(head):
+    if head is None:
+        return None
+    if head.next is None:
+        return None
+    current = head
+    while current.next.next:
+        current = current.next
+    current.next = None
+    return head
+
+
 def length(head):
     count = 0
     current = head
@@ -109,4 +135,17 @@ displayForward(head)
 
 position = 5
 head = insertPosition(head, position, 4)
+displayForward(head)
+
+
+head = Node(1)
+head.next = Node(2)
+head.next.prev = head
+head.next.next = Node(3)
+head.next.next.prev = head.next
+displayForward(head)
+head = deleteBeginning(head)
+displayForward(head)
+
+head = deleteEnding(head)
 displayForward(head)
