@@ -1,4 +1,4 @@
-# binary search approach
+# Binary search approach
 def insertPosition(nums, target):
     head = 0
     tail = len(nums) - 1
