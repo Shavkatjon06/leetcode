@@ -100,7 +100,6 @@
 #     return nums
 # print(rotateRight([1,2,3,4,5]))
 
-
 # move zeroes to the end 1
 # def moveZeroes(nums):
 #     left = 0
